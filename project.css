@@ -1,0 +1,13 @@
+.container{
+    border:5px solid black;
+}
+.row{
+    border: 3px solid red;
+}
+.col,.col-8,.col-12,.col-4{
+    border: 5px solid green;
+}
+
+.first{
+    align-items: ;
+}

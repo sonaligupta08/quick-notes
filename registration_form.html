@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio</title>
+    <link rel="stylesheet" href="registration.css">
+</head>
+<body>
+    <section>
+        <h1>Registration form</h1>
+        <div id="hello">
+            <form id="registrationform">
+                <label for="first-name">First name</label>
+                <input type="text" id="first name" name="first name" >
+                <br>
+                <br>
+
+                <label for="last-name">Last name</label>
+                <input type="text" id="Last name" name="Last name">
+                <br>
+                <br>
+                
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password">
+                <br>
+                <br>
+                <label for="re-password">Re-password</label>
+                <input type="password" id="re-password" name="re-password">
+                <br>
+                <br>
+
+                <label for="email">Email</label> 
+                <input type="text" id="email" name="email">
+
+            <br>
+            <br>
+               <label for="gender">Gender</label>
+               <select>
+                <option value="male">male</option>
+                <option value="female">female</option>
+                <option value="others" >others</option>
+               </select>
+               <br>
+               <br>
+
+               <label for="age">Age</label>
+               <input type="number" id="age" name="age">
+               <br>
+               <br>
+
+               <button type="button" onclick="submissionform()">Submit </button>
+
+            </form>
+        </div>
+        
+    </section>
+    <script>
+        
+function submissionform(){
+    //get the age value and convert it into number
+const age=parseInt(document.getElementById("age").value,10);
+const password=document.getElementById("password");
+const repassword=document.getElementById("re-password");
+
+
+if (age<18){
+alert("you are should be 18+ to register!!");
+return false;
+}
+
+if(password.value!==repassword.value){
+alert("your password and repassword should be same");
+return false;
+}
+
+//submit the form if validation passes
+alert("form submitted succesfully");
+document.getElementById("registrationform").submit();
+
+}
+
+    </script>
+</body>
+</html>
